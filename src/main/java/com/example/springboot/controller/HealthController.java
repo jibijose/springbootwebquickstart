@@ -21,7 +21,7 @@ public class HealthController {
 		return "System " + systemName + " is up. Time is " + new Date();
 	}
 
-	@RequestMapping("/customhealth")
+	@RequestMapping("/health")
 	public String health() {
 		return "Health from Spring Boot!";
 	}

@@ -1,6 +1,7 @@
 docker-machine stop
 docker-machine start
 
+docker rmi jibijose/springbootwebquickstart
 docker build --build-arg JAR_FILE=target/springbootwebquickstart-1.0.0.jar -t="jibijose/springwebapp" .
 
 #foreground

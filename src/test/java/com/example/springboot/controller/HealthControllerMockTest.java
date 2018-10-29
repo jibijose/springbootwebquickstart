@@ -8,8 +8,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.*;
+import org.mockito.junit.MockitoJUnitRunner;
+
 import static org.mockito.Mockito.*;
-import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -43,7 +44,7 @@ public class HealthControllerMockTest {
 	
 	@Test
 	public void getHealth() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/customhealth").accept(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.get("/health").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(content().string(equalTo("Health from Spring Boot!")));
 	}
 
